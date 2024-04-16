@@ -1,0 +1,55 @@
+Error Documentation: login.ejs
+
+This document outlines the errors introduced in the login.ejs file.
+Two specific errors were deliberately introduced.
+
+Error 1: Incorrect Action Attribute
+
+Description: In the login form,the action attribute is set to  (action="/login-bug"), which is incorrect. : line 31
+This action attribute should point to the route responsible for handling the login form submission.
+
+Example of error:
+<form action="/login-bug" method="post">
+
+
+Error 2: Duplicate ID Attribute
+
+Description: Both the password input field and its label have the same ID attribute ("password") : line 38, line 39.
+The JavaScript functions will now be targeting the wrong element or CSS styles.
+
+Example of error:
+<label for="password" class="form-label text-dark" id="password">Password</label>
+<input type="password" class="form-control" id="password" name="password" required>
+
+
+Resolution to correct errors:
+
+To resolve these errors:
+
+1. Update the action attribute in the form to point to the correct route for handling login form submissions:
+
+Correction
+<form action="/login" method="post">
+
+2. Ensure that each element in the HTML document has a unique ID Attributes to avoid conflicts. Update one of the elements to have distinct ID:
+
+Correction
+<label for="passwordLabel" class="form-label text-dark" id="passwordLabel">Password</label>
+<input type="password" class="form-control" id="passwordInput" name="password" required>
+
+
+Tools and Process for Debugging
+
+To debug and resolve these issues, the following tools and processes can be used:
+
+1. Visual Inspection, by manually reviewing the HTML code in login.ejs to identify the errors.
+
+2. Browser Developer Tools: Use the browser's developer tools (e.g., Chrome DevTools) to inspect the HTML structure, or view console logs to debug html or JavaScript code.
+
+3. Console Output: Print debug messages or errors to the console using JavaScript to identify any runtime issues.
+
+4. HTML Validator: Utilize online HTML validation tools to check for syntax errors and ensure compliance with HTML standards.
+
+5. Code Linting: Enable code linting in the text editor or IDE to identify potential syntax errors and enforce coding conventions.
+
+By following these debugging practices and utilizing appropriate tools, the errors in the login.ejs file can be identified and resolved efficiently.

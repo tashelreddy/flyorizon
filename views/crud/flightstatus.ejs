@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly Orizon Airline</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!--CSS-->
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/account.css">
+   <link rel="stylesheet" href="/css/form.css">
+   <!--Fontawesome-->
+   <script src="https://kit.fontawesome.com/1fe08c0760.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<div class="container">
+    <div class="main-body">
+         
+          <div class="sidebar">
+            <a href="#" class="active"><button type="button" class="btn btn">Dashboard</button></a>
+            <a href="/editbooking"><button type="button" class="btn btn">Update Trip</button></a>   
+            <a href="/searchform"><button type="button" class="btn btn">My bookings</button></a>   
+            <a href="/favoritelist"><button type="button" class="btn btn">Favorites</button></a>  
+            <a href="/checkin"><button type="button" class="btn btn">Check In</button></a>
+            <a href="/flightstatus"><button type="button" class="btn btn">Flight Status</button></a>
+        </div>
+
+    <div class="booking-form">
+        <form action="/flight-status" method="post">
+            <div class="mb-3">
+                <label for="flight-number" class="form-label text-dark">Flight Number</label>
+                <input type="text" class="form-control" id="flight-number" name="flight-number" required>
+            </div>
+            <div class="mb-3">
+                <label for="departure-date" class="form-label text-dark">Departure Date</label>
+                <input type="date" class="form-control" id="departure-date" name="departure-date" required>
+            </div>
+            <button type="submit" class="btn btn-travel">Check Status</button>           
+        </form>
+    </div>
+  </div>
+</div>
+
+              
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="text-dark">Flight Status <i class="fa-solid fa-plane-addon-icon"></i></h2>
+            <form action="/flight-status" method="post">
+                <div class="mb-3">
+                    <label for="flight-number" class="form-label text-dark">Flight Number</label>
+                    <input type="text" class="form-control" id="flight-number" name="flight-number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="departure-date" class="form-label text-dark">Departure Date</label>
+                    <input type="date" class="form-control" id="departure-date" name="departure-date" required>
+                </div>
+                <button type="submit" class="btn btn-travel">Check Status</button>           
+            </form>
+            <div class="row mt-4">
+                <div class=" col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Use Airhub Web App</h5>
+                            <p class="card-text">Track flights and weather in your destination city.Get yourself a travel buddy!</p>
+                            <a href="#" target="_blank" class="btn btn-travel">Visit Airhub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" container-form col-md-6">
+            <h2 class="text-dark">Login <i class="fa-solid fa-user addon-icon"></i></h2>
+            <!-- Removed error by providing an correct action attribute -->
+            <form action="/login" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label text-dark">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label text-dark">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                <button type="submit" class="btn btn-travel mt-2">Login</button>           
+            </form>
+            <div>
+                <p class="mt-3 text-danger">No account yet? <a href="/signup" class="btn btn-type">Join the Orizon</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/login.js"></script>

@@ -1,0 +1,91 @@
+
+
+    <section class="header py-5" style="height: 600px;">
+        <div class="container">
+            <div class="jumbotron text-center position-relative" style="margin-top: -100px;">
+                <div class="d-flex flex-column justify-content-center align-items-center top-0 start-0 end-0 bottom-0">
+                    <img src="../images/contact.png" alt="contact" class="img-fluid rounded mx-auto d-block" style="width: 60%;"> 
+                    <p class=" text-end fw-bold text-contact">NEED HELP WITH ANYTHING?</p>        
+                </div>
+              </div>
+        </div>
+    </section>
+    
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mx-5 mt-5">
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            <li class="breadcrumb-item dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="/signup">Sign Up</a></li>
+                    <li><a class="dropdown-item" href="/login">Sign In</a></li>
+                </ul>
+            </li>
+        </ol>
+    </nav>
+<!-- Main content -->
+<div class="container mt-5">
+    <section class="text-center">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? We'd love to hear from you!</p>
+        <div class="row mt-4">
+            <div class="col-md-6 mx-auto">
+                <h2>Contact Form</h2>
+                <form action="/contact" method="POST" id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name"  autocomplete="given-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email"  autocomplete="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-contact">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="mt-5 text-center" style="width: 100%;">
+
+        <div class="row">
+            <!-- First Column -->
+            <div class="col-md-6">
+              <h2>Orizon Odessey</h2>
+              <hr>
+              <p><img src="../images/airorizon.png" alt="" srcset="" style="width: 130px;">  flight reservations:</p>
+              <p class="p-text">1-888-619-8622</p>
+              <p>Mon to Sun 5:30 AM to 2:00 AM EST</p>
+            </div>
+            
+            <!-- Second Column -->
+            <div class="col-md-6">
+              <h2>Orizon Island Hopper</h2>
+              <hr>
+              <p><img src="../images/airorizon.png" alt="" srcset="" style="width: 130px;"> Island Hopper packages:</p>
+              <p>1-855-372-1100</p>
+              <p>Mon to Fri 8:30 AM to 6:00 PM EST</p>
+              <p>Sat 9:00 AM to 5:00 PM EST</p>
+            </div>
+          </div>
+          <div class="booked mt-4">
+            <p class="text-center fw-bold" style="font-size: 30px; color: var(--blue);">Have you already booked?</p>
+            <p class="text-center">Please have your booking confirmation ready when you call.
+                <br>
+               Your confirmation number consists of a combination <br> of 6 letters and numbers 
+               (e.g. AB1CDE) and always start and end with a letter. <br> You can find it on your booking confirmation or your itinerary email.</p>
+            <p class="text-center">For Orizon Escapes packages, please have your 6 digits <br> booking number
+               (e.g. 0123456) ready at the time of calling.</p>
+          </div>
+    </section>
+</div>
+
+  <!--JS-->
+  <script src="/js/main.js"></script>

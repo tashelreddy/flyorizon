@@ -1,0 +1,448 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333; 
+}
+
+:root{
+    --blue: #5acbd9;
+    --pink: #ef97bf;
+    --dark-pink: #ed6fa8;
+    --salmon: #f47882;
+    --black: #000;
+    --gray: #ccc;
+    --cream: #f1f1f1;
+    --white: #fff;
+}
+
+.logo{
+    width: 170px;
+}
+/* Navbar Styles */
+.navbar-brand {
+    font-size: 1.5rem; 
+}
+
+.nav-link {
+    color: var(--blue);
+    font-size: 20px;
+}
+
+#navbarSupportedContent{
+    z-index: 10;
+}
+
+.search-icon {
+    cursor: pointer;
+    color: var(--black);
+  }
+
+  .search-icon:hover{
+    color: var(--black);
+  }
+
+  .icon{
+   color: var(--black);
+  }
+
+  .header{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(117,218,226,1) 100%);
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 270px;
+    margin-bottom: 30px;
+}
+
+.text{
+    margin-top: -60px;
+    margin-left: 500px;
+    font-size: 20px;
+    color: var(--black);
+}
+
+.button{
+border-radius: 50px;
+width: 20%;
+margin-left: 110px;
+}
+.booking-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .tab-content {
+    margin-top: 20px;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-row .form-group {
+    width: 48%;
+  }
+
+  /* Style the tab buttons */
+  .tab {
+    overflow: hidden;
+    border: 1px solid var(--gray);
+    background-color: var(--cream);
+  }
+
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: background-color 0.3s;
+  }
+
+  .tab button:hover {
+    background-color: var(--dark-pink);
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid var(--gray);
+    border-top: none;
+  }
+
+  /* Show the selected tab */
+  .tabcontent.show {
+    display: block;
+  }
+
+  .form-label {
+    font-size: 11px;
+  }
+
+  #oneWay-tab, #roundtrip-tab {
+    font-size: 15px;
+  }
+
+  .btn-type {
+    background-color: var(--dark-pink);
+    border: none;
+  }
+
+  .btn-type:hover {
+    background-color: var(--blue);
+  }
+
+  #flightStatus-tab, #myBookings-tab, #flight-tab, #flightHotel-tab, #checkIn-tab {
+    color: var(--pink);
+  }
+
+  #flightStatus-tab:hover, #myBookings-tab:hover, #flight-tab:hover, #flightHotel-tab:hover, #checkIn-tab:hover {
+    color: var(--blue);
+  }
+.card-img{
+    width: 100%;
+}
+
+.btn-travel{
+    background-color: var(--blue);
+}
+
+.btn-travel:hover{
+    background-color: var(--blue);
+}
+
+
+.options{
+    width: 130px;
+}
+
+.addon-icon{
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: var(--salmon);
+}
+
+.bg-salmon{
+background-color: var(--blue);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.travel-info{
+    color: var(--white);
+}
+
+hr{
+    color: var(--salmon);
+}
+
+.text-travel{
+    margin-top: -580px;
+    margin-left: -20px;
+    font-size: 40px;
+    color: var(--salmon);
+}
+
+.text-tracker{
+    margin-top: -380px;
+    margin-left: -372px;
+    font-size: 40px;
+    color: var(--salmon);
+}
+
+.tracker-img{
+    width: 40%;
+   margin-top: 178px;
+}
+
+.message-tracker{
+  margin-top: -150px;
+  margin-left: -372px;
+  font-size: 40px;
+  color: var(--salmon);
+}
+
+.message-img{
+  width: 40%;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.text-about{
+    margin-top: -796px;
+    margin-left: -110px;
+    font-size: 40px;
+    color: var(--salmon);
+}
+
+.about-img{
+    width: 100%;
+   margin-top: -360px;
+}
+
+.text-contact{
+    margin-top: -246px;
+    margin-left: 666px;
+    font-size: 40px;
+    color: var(--salmon);
+}
+
+.btn-contact{
+    background-color: var(--salmon);
+}
+
+/* form submit style*/
+
+ul{
+list-style: none;
+
+}
+
+.card {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+
+.gutters-sm {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.mb-3, .my-3 {
+  margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+  background-color: #e2e8f0;
+}
+.h-100 {
+  height: 100%!important;
+}
+.shadow-none {
+  box-shadow: none!important;
+}
+
+ /* Define your sidebar styles */
+ .sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-color: #5acbd9;
+  padding-top: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: width 0.3s; 
+}
+.sidebar a {
+display: block;
+color: black;
+padding: 16px;
+text-decoration: none;
+}
+
+.sidebar a.active {
+color: white;
+}
+/* Expand the sidebar when hovered */
+.sidebar:hover {
+  width: 200px; 
+}
+
+/* Define your sidebar button styles */
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Add hover effect to sidebar buttons */
+.sidebar button:hover {
+  background-color: #5acbd9;
+}
+
+/* Add styling for the profile page content */
+.profile-content {
+  margin-left: 10px;
+  padding: 20px;
+}
+
+/* Hide the profile page content by default */
+.profile-content form {
+  display: none;
+}
+
+/* Show the form when its corresponding button is clicked */
+.profile-content form.active {
+  display: block;
+}
+
+.main-body {
+margin-left: 200px;
+padding: 1px 16px;
+height: 1000px;
+}
+
+.table-container {
+  margin-top: 20px; 
+  text-align: center;
+
+}
+table {
+  width: 90%; 
+  border-collapse: collapse; 
+  margin: 0 auto;
+}
+th, td {
+  padding: 8px; 
+  text-align: center; 
+}
+th {
+  background-color: #f2f2f2; 
+}
+
+.buttons {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.236); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #5acbd9; 
+  width: 300px; 
+  margin: 15% auto; 
+  padding: 20px;
+  border-radius: 10px; 
+  color: #333; 
+}
+
+/* Close Button */
+.close {
+  color: #333; 
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000; 
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add margin to buttons and input */
+.modal-content button,
+.modal-content input {
+  margin-top: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #5acbd9;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box; 
+}
+
+/* Success Message on Update Success */
+
+.center {
+  text-align: center;
+}

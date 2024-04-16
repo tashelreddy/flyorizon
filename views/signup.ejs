@@ -1,0 +1,97 @@
+
+   
+     <section class="form-section">
+     <div class="mask d-flex align-items-center h-100">
+       <div class="container h-100">
+         <div class="row d-flex justify-content-center align-items-center h-100">
+           <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+             <div class="card" style="border-radius: 15px;">
+               <div class="card-body p-5">
+                 <h1 class="text-uppercase text-center mb-5">Join Orizon_Hoppers</h1>
+                 <p class="text-center">Registration is quick and free! Complete the form below to sign up and receive your VIPorizon number instantly; then add it to your booking to earn points when you fly.</p>
+                 <p class="text-center">All fields are required unless otherwise noted</p>
+                 <form action="/signup" method="post" id="signupForm">
+   
+                   <div class="form-outline mb-4">
+                     <input type="text" id="firstName" name="firstName" class="form-control form-control-lg" />
+                     <label class="form-label" for="firstName">First Name</label>
+                   </div>
+                   <div class="form-outline mb-4">
+                    <input type="text" id="lastName" name="lastName" class="form-control form-control-lg" />
+                    <label class="form-label" for="lastName">Last Name</label>
+                  </div>
+                   <div class="form-outline mb-4">
+                     <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                     <label class="form-label" for="email">Your Email</label>
+                   </div>
+   
+                   <div class="form-outline mb-4">
+                     <input type="password" id="password" name="password" class="form-control form-control-lg" minlength="8" maxlength="16" required />
+                     <label class="form-label" for="Password">Password</label>
+                   </div>
+   
+                   <div class="form-outline mb-4">
+                     <input type="password" id="repeatPassword" name="repeatPassword"   class="form-control form-control-lg" />
+                     <label class="form-label" for="repeatPassword">Repeat your password</label>
+                   </div>
+   
+                   <div class="form-check d-flex justify-content-center mb-5">
+                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                     <label class="form-check-label" for="form2Example3g">
+                       I agree to all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                     </label>
+                   </div>
+   
+                   <div class="d-flex justify-content-center">
+                     <button type="submit"
+                       class="btn btn-type btn-block btn-lg text-body">Register</button>
+                   </div>
+   
+                   <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/login"
+                       class="fw-bold text-body"><u>Login here</u></a></p>
+   
+                 </form>
+                 <br>
+                 <p>VIPorizon Airlines is committed to protecting the privacy of our customers. For more information, please review our <a href="/privacy-policy">Privacy Policy</a> or <a href="/contact">Contact Us</a> for more details.</p>
+
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <script>
+      function validateForm() {
+          var firstName = document.getElementById("firstName").value;
+          var lastName = document.getElementById("lastName").value;
+          var email = document.getElementById("Email").value;
+          var password = document.getElementById("Password").value;
+          var repeatPassword = document.getElementById("repeatPassword").value;
+          var errorMessage = document.getElementById("error-message");
+  
+          // Clear previous error messages
+          errorMessage.innerHTML = "";
+          errorMessage.style.display = "none";
+  
+          // Perform validation
+          if (!firstName || !lastName || !email || !password || !repeatPassword) {
+              errorMessage.innerHTML = "All fields are required.";
+              errorMessage.style.display = "block";
+              return false;
+          }
+  
+          if (password !== repeatPassword) {
+              errorMessage.innerHTML = "Passwords do not match.";
+              errorMessage.style.display = "block";
+              return false;
+          }
+  
+          // Additional validation (e.g., email format, password strength) can be added here
+  
+          return true; // Form will be submitted if validation passes
+      }
+  </script>
+   </section>
+  
+    <script src="/js/signup.js"></script>
+    

@@ -1,0 +1,105 @@
+<!-- searchresults.ejs -->
+<h1 class="text-center">Search Results</h1>
+<div class="table-container">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Departure City</th>
+                <th>Arrival City</th>
+                <th>Departure Date</th>
+                <th>Return Date</th>
+                <th>Passengers</th>
+                <th>Class</th>
+                <th>Trip Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% bookings.forEach(function(booking) { %>
+                <tr id="booking_<%= booking.booking_id %>">
+                    <td><%= booking.booking_id %></td>
+                    <td><%= booking.FirstName %></td>
+                    <td><%= booking.LastName %></td>
+                    <td><%= booking.DepartureCity %></td>
+                    <td><%= booking.ArrivalCity %></td>
+                    <td><%= booking.DepartureDate %></td>
+                    <td><%= booking.ReturnDate %></td>
+                    <td><%= booking.Passengers %></td>
+                    <td><%= booking.Class %></td>
+                    <td><%= booking.TripType %></td>    
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+<!-- Buttons -->
+<div class="buttons">
+   <a href="/searchform"><button type="submit" class="btn btn-danger mx-2">Go Back</button></a> 
+   <button type="button" class="btn btn-danger" onclick="deleteBooking()">Delete Booking</button>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <p id="modal-message">Are you sure you want to delete this booking?</p>
+      <input type="text" id="confirmationNumber" placeholder="Confirmation Number">
+      <button onclick="deleteBookingConfirmed()" class="btn btn-danger">Confirm</button>
+      <button onclick="closeModal()" class="btn btn-light">Cancel</button>
+    </div>
+  </div>
+  
+  
+<style>
+   
+</style>
+<script>
+    // Function to open the modal box
+    function openModal() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    }
+
+    // Function to close the modal box
+    function closeModal() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    // Function to handle the deletion confirmation
+    function deleteBookingConfirmed() {
+        const confirmationNumber = document.getElementById("confirmationNumber").value;
+
+        // Send a DELETE request to the server to delete the booking
+        fetch(`/deleteBooking/${confirmationNumber}`, {
+            method: 'DELETE',
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            closeModal(); 
+            
+            // Display a success message in place of the booking
+            const bookingElement = document.getElementById("booking_" + confirmationNumber);
+if (bookingElement) {
+    bookingElement.innerHTML = "<div class='success-message text-center'>Booking deleted successfully</div>";
+}
+
+
+        })
+        .catch(error => {
+            console.error('Error deleting booking:', error);
+            // Display an error message to the user
+            alert('Error deleting booking');
+        });
+    }
+
+    // Function to open modal and initiate deletion process
+    function deleteBooking() {
+        openModal();
+    }
+</script>

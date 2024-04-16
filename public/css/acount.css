@@ -1,0 +1,74 @@
+
+:root{
+    --blue: #5acbd9;
+    --pink: #ef97bf;
+    --dark-pink: #ed6fa8;
+    --salmon: #f47882;
+    --black: #000;
+    --gray: #ccc;
+    --cream: #f1f1f1;
+    --white: #fff;
+}
+
+
+.container-form {
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    border-radius: 5px;  
+    background-color: var(--pink);
+}
+
+.container h2 {
+    margin-bottom: 20px; 
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+.btn-primary {
+    width: 100%; 
+}
+
+/* Back to Home Link Styles */
+.container a {
+    text-decoration: none;
+
+    display: block; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.container a:hover {
+    background-color: var(--blue); 
+    color: var(--white); 
+}
+
+.bg-type{
+background-color: var(--salmon);
+}
+
+.signup-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.text-contact {
+    margin-top: -298px;
+    margin-left: 666px;
+    font-size: 40px;
+    color: var(--salmon);
+}
